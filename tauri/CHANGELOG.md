@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.11.2]
+
+-   Fixes the event system usage on the plugin `ready` hook.
+    -   [23132ac](https://www.github.com/tauri-apps/tauri/commit/23132acf765ab8b6a37b74151a4c175b68390657) fix(tauri): run plugin::ready without webview.dispatch ([#1164](https://www.github.com/tauri-apps/tauri/pull/1164)) on 2021-01-29
+
 ## [0.11.1]
 
 -   Update webview-official dependency which fix compatibility on macOS.
