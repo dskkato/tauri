@@ -27,7 +27,7 @@ pub mod version;
 pub mod cli;
 #[cfg(feature = "cli")]
 #[macro_use]
-extern crate clap;
+extern crate clap_v3;
 
 /// The desktop notifications API module.
 #[cfg(feature = "notification")]

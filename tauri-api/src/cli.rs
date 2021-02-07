@@ -1,6 +1,6 @@
 use crate::config::{get as get_config, CliArg, CliConfig};
 
-use clap::{App, Arg, ArgMatches};
+use clap_v3::{App, Arg, ArgMatches};
 use serde::Serialize;
 use serde_json::Value;
 use std::collections::HashMap;
@@ -159,8 +159,8 @@ fn get_arg<'a>(arg_name: &'a str, arg: &'a CliArg) -> Arg<'a> {
     clap_arg = clap_arg.short(short);
   }
 
-  clap_arg = bind_string_arg!(arg, clap_arg, description, about);
-  clap_arg = bind_string_arg!(arg, clap_arg, long_description, long_about);
+  clap_arg = bind_string_arg!(arg, clap_arg, description, help);
+  clap_arg = bind_string_arg!(arg, clap_arg, long_description, long_help);
   clap_arg = bind_value_arg!(arg, clap_arg, takes_value);
   clap_arg = bind_value_arg!(arg, clap_arg, multiple);
   clap_arg = bind_value_arg!(arg, clap_arg, multiple_occurrences);
